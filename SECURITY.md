@@ -2,9 +2,14 @@
 
 ## Reporting a vulnerability
 
-Please report security problems privately, by email to
-**support@memgineering.com**, with "security" in the subject line. Do not open
-a public issue for them.
+Please report security problems privately, in either of two ways:
+
+- on GitHub, with **Report a vulnerability** on this repository's
+  [Security tab](https://github.com/memgineering/memgineering-cli/security/advisories/new);
+- by email to **support@memgineering.com**, with "security" in the subject
+  line.
+
+Do not open a public issue for them.
 
 It helps to include:
 
@@ -13,7 +18,7 @@ It helps to include:
 - anything the problem depends on, such as a setting, a second machine or a
   hosted account.
 
-The maintainer reads this mailbox. Please give us time to publish a fix before
+Both reach the maintainer. Please give us time to publish a fix before
 you disclose the problem publicly, and say whether you would like to be
 credited.
 

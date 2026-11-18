@@ -46,8 +46,8 @@ point to a repository that is not public. Use this one instead.
 
 ## Questions and bugs
 
-Open an issue here, or mail support@memgineering.com. Security problems go by
-email only: see [SECURITY.md](./SECURITY.md).
+Open an issue here, or mail support@memgineering.com. Report security problems
+privately, never in an issue: see [SECURITY.md](./SECURITY.md).
 
 ## License
 
