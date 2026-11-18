@@ -1,0 +1,2 @@
+# The package folders are npm tarballs, byte for byte: never convert line endings.
+memgineering/** -text

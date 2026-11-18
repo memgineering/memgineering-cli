@@ -1,0 +1,63 @@
+memgineering
+Copyright 2026 Chang Do Geon ("Rayul", 장도건)
+
+This product includes software developed for memgineering
+(https://memgineering.com).
+
+Licensed under the Apache License, Version 2.0. See LICENSE for the full
+terms. This NOTICE file must be included in redistributions and derivative
+works, per section 4(d) of that license.
+
+
+BUNDLED FONT
+------------
+
+The install screen (`memgineering setup --web`) carries a typeface inside the
+program rather than fetching one. It is served over loopback under a policy
+that allows no outbound request, so a webfont either arrives in the document or
+does not arrive at all.
+
+  Jua
+  Copyright 2018 The BM JUA Project Authors
+  (https://github.com/googlefonts/jua)
+  Licensed under the SIL Open Font License, Version 1.1
+  (http://scripts.sil.org/OFL)
+
+What ships is a SUBSET — 431 of the face's 2,520 glyphs, being the characters
+the install screen's headings contain in Korean and English. It is embedded as
+a WOFF2 in the program's own code and is not offered for download, sold, or
+distributed on its own. The OFL permits both the subsetting and the embedding;
+this notice is the attribution it asks for in return. The font is not renamed,
+and no Reserved Font Name is claimed.
+
+
+UPDATES AND SUPPORT
+-------------------
+
+memgineering checks for a newer version at most once a day and, when
+auto-update is on, can install one. Both are stated here rather than only in
+the README because they involve the network and the user's install directory.
+
+  * The check contacts the npm registry, and optionally
+    https://memgineering.com/version-policy.json. Neither request carries
+    identifying information beyond what any HTTP client sends.
+  * `MEMGINEERING_NO_UPDATE=1` skips the check for a single run.
+    `memgineering setup --auto-update off` turns installation off for good.
+  * Installation only ever targets the version npm publishes as `latest`.
+    The policy document is advisory and can never select a version.
+
+Older versions are not disabled remotely, and nothing in this software will
+stop working locally because a newer release exists. Every published version
+remains installable from npm indefinitely. What a future release may withdraw
+is support for older clients on *hosted* services operated by memgineering —
+if that happens, the version policy will say so ahead of time and the CLI will
+print it. Upgrading restores access; nothing you have stored is affected
+either way, because your notes are files on your own disk and remain yours.
+
+
+YOUR DATA
+---------
+
+This software reads a folder of notes you point it at and keeps a derived
+index outside that folder. It does not upload your notes. Deleting the index
+costs a rebuild and nothing else. See the README for what is stored and where.

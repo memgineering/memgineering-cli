@@ -1,0 +1,78 @@
+{
+  "name": "memgineering",
+  "version": "0.28.0",
+  "private": false,
+  "description": "One memory for the AI you connect. Recall, remember, and revise a brain your agents share — stored in your own folder.",
+  "license": "Apache-2.0",
+  "homepage": "https://memgineering.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memgineering/memgineering.git"
+  },
+  "bugs": {
+    "url": "https://github.com/memgineering/memgineering/issues"
+  },
+  "type": "module",
+  "bin": {
+    "memgineering": "bin/memgineering.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "bin",
+    "dist",
+    "assets",
+    "scripts",
+    "README.md",
+    "CHANGELOG.md",
+    "NOTICE"
+  ],
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup && rm -rf assets && mkdir -p assets && node scripts/copy-skills.mjs",
+    "typecheck": "tsc --noEmit",
+    "pretest": "pnpm build",
+    "test": "vitest run",
+    "pretest:unit": "pnpm build",
+    "test:unit": "vitest run",
+    "prepublishOnly": "pnpm build",
+    "postinstall": "node scripts/postinstall.mjs"
+  },
+  "dependencies": {
+    "@iarna/toml": "^2.2.5",
+    "commander": "^12.1.0",
+    "kleur": "^4.1.5",
+    "prompts": "^2.4.2",
+    "semver": "^7.8.4",
+    "string-width": "^7.2.0",
+    "yaml": "^2.9.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@kordis/api-client": "workspace:*",
+    "@kordis/config": "workspace:*",
+    "@kordis/contracts": "workspace:*",
+    "@kordis/harness-schema": "workspace:*",
+    "@kordis/memory-engine": "workspace:*",
+    "@kordis/storage-adapter": "workspace:*",
+    "@kordis/translators": "workspace:*",
+    "@types/node": "^22.9.0",
+    "@types/prompts": "^2.4.9",
+    "@types/semver": "^7.5.8",
+    "tsup": "^8.3.5",
+    "tsx": "^4.22.4",
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.6"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "ai",
+    "memory",
+    "agent",
+    "memory-engineering",
+    "claude-code",
+    "codex",
+    "second-brain"
+  ]
+}
